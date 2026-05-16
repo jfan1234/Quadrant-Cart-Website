@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5500/index.html#gallery -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadrantCart.com</title>
+
+    
+    
+<link rel="stylesheet" href="./QuadrantCart.com_files/styles.css"><link rel="stylesheet" href="./QuadrantCart.com_files/css2"></head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Quadrant Cart</div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:5500/index.html#about">About</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#services">Services</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#menu">Menu</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#gallery">Gallery</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#faq">FAQ</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#contact">Contact Us</a></li>
+                <li>
+                    <a href="https://www.instagram.com/quadrant.cart" target="_blank">
+                    <img src="./QuadrantCart.com_files/insta-logo.svg" alt="@Quadrant.cart" class="nav-logo">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="box left-box">
+        </div>
+
+        <div class="box right-box">
+            <h1>Matcha as an art form, now on wheels</h1>
+            <p>Contact us today to get a quote</p>
+            <div class="button-group">
+                <button class="but_dis">Discover More</button>
+                <button class="but_book_event">Book for Event</button>
+            </div>
+
+        </div>
+    </div>
+
+    
+<div class="hero-section_2">
+        <div class="box left-box_2">
+            <h1>sQuadrant Team</h1>
+            <p>Heidi Le</p>
+            <p>Nina Le</p>
+            <p>Felix Hung Lee</p>
+            <p>Vivian Hsiao</p>
+        </div>
+        <div class="box right-box_2">
+        </div>
+</div>
+    
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>"Everything was so professional, very instagramable and well done. Thank you for sharing your vision with us!"</p>
+            <h4>- Abbie Jo</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"This was super refreshing and great for a non matcha fan. Excellent flavor. Wouldn't change a thing!"</p>
+            <h4>- Tu V</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"10/10 would get again!"</p>
+            <h4>- Alex F</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Absolutely amazing experience with Quadrant Cart! The drinks were beautifully crafted, incredibly fresh, and had the perfect balance of flavor. You can really tell a lot of care goes into every cup. The setup was also super clean and aesthetic, which made it even better for the event vibe. I'm already looking forward to the next event—can't wait to have it again!"</p>
+            <h4>- Jesse F</h4>
+        </div>
+
+         <div class="testimonial-card">
+            <p>"Loved the matcha cart! Super fresh drinks and great vibe. Can't wait for the next event!"</p>
+            <h4>- Justin B</h4>
+        </div>
+
+         <div class="testimonial-card">
+            <p>"Such a great experience! Delicious coffee and a beautiful setup. Looking forward to seeing you again soon!”</p>
+            <h4>- Mickey M</h4>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <h3>Quadrant Cart</h3>
+            <p>Precision in every quadrant.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="http://127.0.0.1:5500/index.html#email">Email: quadrant.cart@gmail.com</a>
+            <a href="http://127.0.0.1:5500/index.html#insta">Instagram: @quadrant.cart</a>
+            <a href="http://127.0.0.1:5500/index.html#contact">Contact Us</a>
+        </div>
+
+        <div class="footer-logo">
+            <a href="https://www.instagram.com/quadrant.cart">
+                <img src="./QuadrantCart.com_files/quad_logo.jpeg" alt="Quadrant Cart Logo" class="footer-img">
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Quadrant Cart. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
