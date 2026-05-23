@@ -123,7 +123,7 @@ main {
 }
 
 .left-box {
-    background: url('cof_cart.png') center/cover no-repeat;
+    background: url('optimized/cof-cart.jpg') center/cover no-repeat;
 }
 
 .right-box,
@@ -250,7 +250,7 @@ main {
 .right-box_2 {
     background:
         linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.05)),
-        url('quad_team.JPG') center/cover no-repeat;
+        url('optimized/quad-team.jpg') center/cover no-repeat;
 }
 
 .home-services {
@@ -1029,16 +1029,16 @@ main {
     background: transparent;
 }
 
-.about-left img[src="felix.PNG"] {
+.about-left img[src="optimized/felix.jpg"] {
     height: auto;
     object-fit: initial;
 }
 
-.about-left img[src="heidi.HEIC"] {
+.about-left img[src="optimized/heidi.jpg"] {
     object-position: 68% center;
 }
 
-.about-left img[src="vivian.PNG"] {
+.about-left img[src="optimized/vivian.jpg"] {
     object-position: center 28%;
 }
 
@@ -1128,35 +1128,6 @@ main {
 
 details[open] p {
     animation: fadeIn 0.3s ease-in;
-}
-
-.contact-form {
-    max-width: 620px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 14px 16px;
-    font-size: 16px;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: rgba(255,255,255,0.75);
-    font-family: inherit;
-}
-
-.contact-form button {
-    padding: 14px;
-    background: var(--text);
-    color: white;
-    border: none;
-    border-radius: 999px;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 700;
 }
 
 .menu-page {
