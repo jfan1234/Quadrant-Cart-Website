@@ -17,6 +17,7 @@
 
         <nav>
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -33,55 +34,83 @@
     </header>
 
 
-<section class="gallery-section">
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img src="quad_logo_2.jpeg" alt="">
+<main class="gallery-page">
+    <section class="gallery-hero">
+        <p class="eyebrow">Gallery</p>
+        <h1>Moments from the cart.</h1>
+        <p>Fresh drinks, thoughtful details, and a mobile setup built to feel polished at every kind of gathering.</p>
+    </section>
+
+    <section class="gallery-section" aria-label="Quadrant Cart photo gallery">
+        <div class="gallery-container">
+            <figure class="gallery-item gallery-item-large">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart mobile coffee and matcha setup">
+                    <img src="cof_cart.png" alt="Quadrant Cart mobile coffee and matcha setup">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart team standing with the cart">
+                    <img src="IMG_3349.JPG" alt="Quadrant Cart team standing with the cart">
+                </button>
+            </figure>
+            <figure class="gallery-item gallery-item-tall">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart drink detail">
+                    <img src="IMG_0187.JPG" alt="Quadrant Cart drink detail">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart event setup detail">
+                    <img src="IMG_2275.JPG" alt="Quadrant Cart event setup detail">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart handcrafted drink">
+                    <img src="IMG_3142.JPG" alt="Quadrant Cart handcrafted drink">
+                </button>
+            </figure>
+            <figure class="gallery-item gallery-item-wide">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart team and cart display">
+                    <img src="IMG_3335.JPG" alt="Quadrant Cart team and cart display">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant limited drops menu display">
+                    <img src="IMG_6816.JPG" alt="Quadrant limited drops menu display">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart customer preference board">
+                    <img src="IMG_4201.JPG" alt="Quadrant Cart customer preference board">
+                </button>
+            </figure>
+            <figure class="gallery-item gallery-item-large">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart team preparing a matcha drink">
+                    <img src="IMG_4215.JPG" alt="Quadrant Cart team preparing a matcha drink">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart drink service moment">
+                    <img src="IMG_9783.JPG" alt="Quadrant Cart drink service moment">
+                </button>
+            </figure>
+            <figure class="gallery-item">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart event photo">
+                    <img src="IMG_9798.JPG" alt="Quadrant Cart event photo">
+                </button>
+            </figure>
+            <figure class="gallery-item gallery-item-wide">
+                <button type="button" class="gallery-image-button" aria-label="Open image: Quadrant Cart menu and setup detail">
+                    <img src="IMG_2289.JPG" alt="Quadrant Cart menu and setup detail">
+                </button>
+            </figure>
         </div>
-        <div class="gallery-item">
-            <img src="cof_cart.png" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_3349.JPG" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_0187.JPG" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_2275.JPG" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_3142.JPG" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_3335.JPG" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_6816.JPG" alt="">
-        </div>
-        <div class="gallery-item">
-            <img src="IMG_3349.JPG" alt="">
-        </div>
-         <div class="gallery-item">
-            <img src="IMG_4201.JPG" alt="">
-        </div>
-         <div class="gallery-item">
-            <img src="IMG_4215.JPG" alt="">
-        </div>
-         <div class="gallery-item">
-            <img src="IMG_9783.JPG" alt="">
-        </div>
-         <div class="gallery-item">
-            <img src="IMG_9798.JPG" alt="">
-        </div>
-         <div class="gallery-item">
-            <img src="IMG_9799.JPG" alt="">
-        </div>
-         <div class="gallery-item">
-            <img src="IMG_2289.JPG" alt="">
-        </div>
-    </div>
- </section>
+    </section>
+</main>
+
+<div class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Expanded gallery image" hidden>
+    <button type="button" class="gallery-lightbox-close" aria-label="Close expanded image">Close</button>
+    <img src="" alt="">
+</div>
 
 <footer class="footer">
     <div class="footer-content">
@@ -92,14 +121,14 @@
         </div>
 
         <div class="footer-links">
-            <a href="#email">Email: quadrant.cart@gmail.com</a>
-            <a href="#insta">Instagram: @quadrant.cart</a>
+            <a href="mailto:quadrant.cart@gmail.com">Email: quadrant.cart@gmail.com</a>
+            <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener noreferrer">Instagram @quadrant.cart</a>
             <a href="contact-us.html">Contact Us</a>
         </div>
 
         <div class="footer-logo">
             <a href="https://www.instagram.com/quadrant.cart">
-                <img src="quad_logo.jpeg" alt="Quadrant Cart Logo" class="footer-img">
+                <img src="Logo.svg" alt="Quadrant Cart Logo" class="footer-img">
             </a>
         </div>
 
@@ -109,6 +138,45 @@
         <p>© 2026 Quadrant Cart. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+    const galleryButtons = document.querySelectorAll(".gallery-image-button");
+    const galleryLightbox = document.querySelector(".gallery-lightbox");
+    const galleryLightboxImage = galleryLightbox.querySelector("img");
+    const galleryLightboxClose = galleryLightbox.querySelector(".gallery-lightbox-close");
+
+    const closeGalleryLightbox = () => {
+        galleryLightbox.hidden = true;
+        galleryLightboxImage.src = "";
+        galleryLightboxImage.alt = "";
+        document.body.classList.remove("has-open-lightbox");
+    };
+
+    galleryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const image = button.querySelector("img");
+            galleryLightboxImage.src = image.src;
+            galleryLightboxImage.alt = image.alt;
+            galleryLightbox.hidden = false;
+            document.body.classList.add("has-open-lightbox");
+            galleryLightboxClose.focus();
+        });
+    });
+
+    galleryLightbox.addEventListener("click", (event) => {
+        if (event.target === galleryLightbox) {
+            closeGalleryLightbox();
+        }
+    });
+
+    galleryLightboxClose.addEventListener("click", closeGalleryLightbox);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !galleryLightbox.hidden) {
+            closeGalleryLightbox();
+        }
+    });
+</script>
 
 </body>
 

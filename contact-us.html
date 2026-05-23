@@ -34,57 +34,140 @@
         </nav>
     </header>
 
-    <main>
+    <main class="contact-page">
+
         <section class="contact-hero">
             <div class="contact-hero-content">
-                <p class="eyebrow">Book Quadrant Cart</p>
-                <h1>Bring a premium matcha and coffee experience to your event.</h1>
-                <p class="contact-intro">
-                    Tell us a little about your event and we’ll follow up with availability, package options, and pricing.
+                <h1>CONTACT US</h1>
+                <p class="hero-subtext">What can we help you with today?</p>
+
+                <div class="contact-tabs" role="tablist" aria-label="Contact form options">
+                    <button type="button" class="contact-tab is-active" role="tab" aria-selected="true" aria-controls="booking" id="booking-tab" data-contact-tab="booking">Booking</button>
+                    <button type="button" class="contact-tab" role="tab" aria-selected="false" aria-controls="general" id="general-tab" data-contact-tab="general">General</button>
+                    <button type="button" class="contact-tab" role="tab" aria-selected="false" aria-controls="collab" id="collab-tab" data-contact-tab="collab">Collab</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="contact-form-section is-active" role="tabpanel" aria-labelledby="booking-tab">
+            <div class="form-heading">
+                <h2>Booking</h2>
+                <p>
+                    Planning an event? Send us the details and we’ll help shape a premium coffee and matcha experience for your guests.
                 </p>
             </div>
-        </section>
 
-        <section class="contact-section" aria-labelledby="contact-heading">
-            <div class="contact-container">
-                <div class="contact-details">
-                    <p class="eyebrow">Contact</p>
-                    <h2 id="contact-heading">Let’s create something memorable.</h2>
-                    <p>
-                        Perfect for weddings, pop-ups, corporate events, private parties, and brand activations.
-                    </p>
+            <form action="https://formspree.io/f/mdaydgrj" method="POST" class="contact-form">
+                <input type="hidden" name="form_type" value="Booking">
 
-                    <div class="contact-info-list">
-                        <a href="mailto:quadrant.cart@gmail.com">quadrant.cart@gmail.com</a>
-                        <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener noreferrer">@quadrant.cart</a>
-                    </div>
+                <div class="form-row">
+                    <input type="text" name="first_name" placeholder="First name*" required>
+                    <input type="text" name="last_name" placeholder="Last name*" required>
                 </div>
 
-                <form action="https://formspree.io/f/mdaydgrj" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
-                    </div>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Phone*" required>
+                    <input type="email" name="email" placeholder="Email*" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-                    </div>
+                <input type="text" name="event_name" placeholder="Event name*" required>
 
-                    <div class="form-group">
-                        <label for="event-type">Event type</label>
-                        <input id="event-type" type="text" name="event_type" placeholder="Wedding, corporate event, pop-up, etc.">
-                    </div>
+                <label class="field-label">
+                    Event date*
+                    <input type="date" name="event_date" required>
+                </label>
 
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Tell us your event date, location, guest count, and what you’re looking for." required></textarea>
-                    </div>
+                <div class="form-row">
+                    <label class="field-label">
+                        Start time*
+                        <input type="time" name="start_time" required>
+                    </label>
+                    <label class="field-label">
+                        End time*
+                        <input type="time" name="end_time" required>
+                    </label>
+                </div>
 
-                    <button type="submit" class="form-submit-button">Send Inquiry</button>
-                </form>
-            </div>
+                <div class="form-row">
+                    <input type="number" name="guest_count" min="1" placeholder="Number of guests*" required>
+                    <input type="text" name="event_location" placeholder="Event location*" required>
+                </div>
+
+                <textarea
+                    name="additional_details"
+                    rows="6"
+                    placeholder="Additional details: event type, drink preferences, setup notes, or anything else we should know."></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
+
+        <section id="general" class="contact-form-section" role="tabpanel" aria-labelledby="general-tab" hidden>
+            <div class="form-heading">
+                <h2>General</h2>
+                <p>
+                    Questions, ideas, or just want to connect? We'd love to hear from you.
+                </p>
+            </div>
+
+            <form action="https://formspree.io/f/mdaydgrj" method="POST" class="contact-form">
+                <input type="hidden" name="form_type" value="General">
+
+                <div class="form-row">
+                    <input type="text" name="first_name" placeholder="First name*" required>
+                    <input type="text" name="last_name" placeholder="Last name*" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email*" required>
+                    <input type="tel" name="phone" placeholder="Phone">
+                </div>
+
+                <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Message*"
+                    required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="collab" class="contact-form-section" role="tabpanel" aria-labelledby="collab-tab" hidden>
+            <div class="form-heading">
+                <h2>Collab</h2>
+                <p>
+                    Interested in partnering, brand activations, or creative collaborations?
+                </p>
+            </div>
+
+            <form action="https://formspree.io/f/mdaydgrj" method="POST" class="contact-form">
+                <input type="hidden" name="form_type" value="Collab">
+
+                <div class="form-row">
+                    <input type="text" name="first_name" placeholder="First name*" required>
+                    <input type="text" name="last_name" placeholder="Last name*" required>
+                </div>
+
+                <input type="text" name="company" placeholder="Company / Brand">
+
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Phone*" required>
+                    <input type="email" name="email" placeholder="Email*" required>
+                </div>
+
+                <input type="text" name="social_media" placeholder="Your social media">
+
+                <textarea
+                    name="collab_details"
+                    rows="6"
+                    placeholder="Collab details*"
+                    required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -96,13 +179,13 @@
 
             <div class="footer-links">
                 <a href="mailto:quadrant.cart@gmail.com">Email: quadrant.cart@gmail.com</a>
-                <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener noreferrer">Instagram: @quadrant.cart</a>
+                <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener noreferrer">Instagram @quadrant.cart</a>
                 <a href="contact-us.html">Contact Us</a>
             </div>
 
             <div class="footer-logo">
                 <a href="index.html" aria-label="Quadrant Cart home">
-                    <img src="quad_logo.jpeg" alt="Quadrant Cart Logo" class="footer-img">
+                    <img src="Logo.svg" alt="Quadrant Cart Logo" class="footer-img">
                 </a>
             </div>
         </div>
@@ -111,5 +194,37 @@
             <p>&copy; 2026 Quadrant Cart. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const contactTabs = document.querySelectorAll("[data-contact-tab]");
+        const contactPanels = document.querySelectorAll(".contact-form-section");
+
+        const showContactPanel = (tab) => {
+            const targetId = tab.dataset.contactTab;
+
+            contactTabs.forEach((item) => {
+                const isActive = item === tab;
+                item.classList.toggle("is-active", isActive);
+                item.setAttribute("aria-selected", String(isActive));
+            });
+
+            contactPanels.forEach((panel) => {
+                const isActive = panel.id === targetId;
+                panel.classList.toggle("is-active", isActive);
+                panel.hidden = !isActive;
+            });
+        };
+
+        contactTabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                showContactPanel(tab);
+            });
+        });
+
+        const initialTab = Array.from(contactTabs).find((tab) => tab.dataset.contactTab === window.location.hash.slice(1));
+
+        if (initialTab) {
+            showContactPanel(initialTab);
+        }
+    </script>
 </body>
 </html>

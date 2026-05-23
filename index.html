@@ -18,6 +18,7 @@
 
         <nav aria-label="Main navigation">
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -53,13 +54,100 @@
                 <p class="eyebrow">Meet the makers</p>
                 <h2>Quadrant Team</h2>
                 <div class="team-list">
-                    <p>Heidi Le</p>
-                    <p>Nina Le</p>
-                    <p>Felix Hung Lee</p>
-                    <p>Vivian Hsiao</p>
+                    <a href="about.html#felix">Felix L.</a>
+                    <a href="about.html#heidi">Heidi L.</a>
+                    <a href="about.html#nina">Nina L.</a>
+                    <a href="about.html#vivian">Vivian H.</a>
                 </div>
             </div>
             <div class="box right-box_2" aria-label="Quadrant Cart team"></div>
+        </section>
+
+        <section class="home-services">
+            <div class="section-heading">
+                <p class="eyebrow">Our services</p>
+                <h2>Built for every kind of gathering.</h2>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <img src="service-weddings.jpg" alt="Elegant wedding reception table setting">
+                    <div class="service-card-content">
+                        <h3>Weddings & Private Events</h3>
+                        <p>Bring a polished matcha and coffee bar to receptions, showers, birthdays, and intimate celebrations.</p>
+                        <a href="contact-us.html#booking" class="service-link">Request your quote</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="service-corporate.jpg" alt="Coffee cups arranged on a corporate meeting table">
+                    <div class="service-card-content">
+                        <h3>Corporate & Workspace</h3>
+                        <p>Treat your team or clients to a thoughtful drink experience for meetings, launches, and office events.</p>
+                        <a href="contact-us.html#booking" class="service-link">Request your quote</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="service-popups.jpg" alt="Coffee and pastries arranged for a pop-up event">
+                    <div class="service-card-content">
+                        <h3>Pop-Ups & Brand Moments</h3>
+                        <p>Create a memorable service point for markets, retail activations, community events, and product drops.</p>
+                        <a href="contact-us.html#booking" class="service-link">Request your quote</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="service-social.jpg" alt="Coffee drinks and desserts on a social celebration table">
+                    <div class="service-card-content">
+                        <h3>Social Celebrations</h3>
+                        <p>Keep guests moving, mingling, and sipping with handcrafted drinks served fresh from the cart.</p>
+                        <a href="contact-us.html#booking" class="service-link">Request your quote</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="events-section" aria-labelledby="events-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Find the cart</p>
+                <h2 id="events-heading">Upcoming Events</h2>
+            </div>
+
+            <div class="events-panel">
+                <div class="calendar-card" aria-label="Event calendar">
+                    <div class="calendar-header">
+                        <button type="button" class="calendar-nav-button" data-calendar-prev aria-label="View previous month">‹</button>
+                        <div>
+                            <p data-calendar-month>May</p>
+                            <span data-calendar-year>2026</span>
+                        </div>
+                        <button type="button" class="calendar-nav-button" data-calendar-next aria-label="View next month">›</button>
+                    </div>
+
+                    <div class="calendar-grid" data-calendar-grid>
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                </div>
+
+                <div class="event-list" aria-label="Upcoming cart appearances">
+                    <article class="event-card">
+                        <time datetime="2026-05-29T13:00">May 29</time>
+                        <div>
+                            <h3>Private Event - Wedding</h3>
+                            <p>1:00 PM · Apple Valley, MN</p>
+                        </div>
+                    </article>
+
+                    <a href="contact-us.html#booking" class="button button-dark event-button">Book Quadrant Cart</a>
+                </div>
+            </div>
         </section>
 
         <section class="testimonials">
@@ -109,13 +197,13 @@
 
             <div class="footer-links">
                 <a href="mailto:quadrant.cart@gmail.com">quadrant.cart@gmail.com</a>
-                <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener">@quadrant.cart</a>
+                <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener">Instagram @quadrant.cart</a>
                 <a href="contact-us.html">Contact Us</a>
             </div>
 
             <div class="footer-logo">
                 <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener">
-                    <img src="quad_logo.jpeg" alt="Quadrant Cart Logo" class="footer-img">
+                    <img src="Logo.svg" alt="Quadrant Cart Logo" class="footer-img">
                 </a>
             </div>
         </div>
@@ -124,6 +212,88 @@
             <p>© 2026 Quadrant Cart. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const eventDates = {
+            "2026-05-29": "Private Event - Wedding"
+        };
+
+        const calendarMonths = [
+            new Date(2026, 4, 1),
+            new Date(2026, 5, 1),
+            new Date(2026, 6, 1),
+            new Date(2026, 7, 1)
+        ];
+
+        const calendarGrid = document.querySelector("[data-calendar-grid]");
+        const calendarMonth = document.querySelector("[data-calendar-month]");
+        const calendarYear = document.querySelector("[data-calendar-year]");
+        const calendarPrevious = document.querySelector("[data-calendar-prev]");
+        const calendarNext = document.querySelector("[data-calendar-next]");
+        const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "long" });
+        let activeCalendarIndex = 0;
+
+        const getDateKey = (year, month, day) => {
+            const monthNumber = String(month + 1).padStart(2, "0");
+            const dayNumber = String(day).padStart(2, "0");
+            return `${year}-${monthNumber}-${dayNumber}`;
+        };
+
+        const renderCalendar = () => {
+            const activeMonth = calendarMonths[activeCalendarIndex];
+            const year = activeMonth.getFullYear();
+            const month = activeMonth.getMonth();
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const previousMonthDays = new Date(year, month, 0).getDate();
+
+            calendarMonth.textContent = monthFormatter.format(activeMonth);
+            calendarYear.textContent = year;
+            calendarGrid.querySelectorAll(".calendar-day").forEach((day) => day.remove());
+
+            for (let index = 0; index < 42; index += 1) {
+                const day = document.createElement("span");
+                day.className = "calendar-day";
+
+                if (index < firstDay) {
+                    day.textContent = previousMonthDays - firstDay + index + 1;
+                    day.classList.add("is-muted");
+                } else if (index >= firstDay + daysInMonth) {
+                    day.textContent = index - firstDay - daysInMonth + 1;
+                    day.classList.add("is-muted");
+                } else {
+                    const dateNumber = index - firstDay + 1;
+                    const dateKey = getDateKey(year, month, dateNumber);
+                    day.textContent = dateNumber;
+
+                    if (eventDates[dateKey]) {
+                        day.classList.add("has-event");
+                        day.setAttribute("aria-label", `${eventDates[dateKey]} on ${monthFormatter.format(activeMonth)} ${dateNumber}, ${year}`);
+                    }
+                }
+
+                calendarGrid.append(day);
+            }
+
+            calendarPrevious.disabled = activeCalendarIndex === 0;
+            calendarNext.disabled = activeCalendarIndex === calendarMonths.length - 1;
+        };
+
+        calendarPrevious.addEventListener("click", () => {
+            if (activeCalendarIndex > 0) {
+                activeCalendarIndex -= 1;
+                renderCalendar();
+            }
+        });
+
+        calendarNext.addEventListener("click", () => {
+            if (activeCalendarIndex < calendarMonths.length - 1) {
+                activeCalendarIndex += 1;
+                renderCalendar();
+            }
+        });
+
+        renderCalendar();
+    </script>
 </body>
 
 </html>
