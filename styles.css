@@ -1759,3 +1759,46 @@ details[open] p {
     }
 
 }
+@media (max-width: 768px) {
+  .quadrant-menu-section {
+    padding: 3rem 1rem;
+    overflow: hidden;
+  }
+
+  .quadrant-map {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 4rem 1rem;
+  }
+
+  .quadrant-map::before,
+  .quadrant-map::after {
+    display: none;
+  }
+
+  .axis-label {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+
+  .quadrant-drink {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .quadrant-drink img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+  }
+}
