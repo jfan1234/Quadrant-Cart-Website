@@ -18,10 +18,13 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 96px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
     margin: 0;
+    overflow-x: hidden;
     background:
         radial-gradient(circle at top left, rgba(46, 100, 23, 0.10), transparent 34%),
         var(--bg);
@@ -37,6 +40,11 @@ body::before {
     pointer-events: none;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.80), transparent 280px);
     z-index: -1;
+}
+
+img,
+svg {
+    max-width: 100%;
 }
 
 .navbar {
