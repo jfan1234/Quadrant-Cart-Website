@@ -1768,45 +1768,171 @@ details[open] p {
 
 }
 @media (max-width: 768px) {
-  .quadrant-menu-section {
-    padding: 3rem 1rem;
-    overflow: hidden;
-  }
+    .menu-page {
+        padding-top: 52px;
+    }
 
-  .quadrant-map {
-    width: 100%;
-    max-width: 100%;
-    min-height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 4rem 1rem;
-  }
+    .menu-page-hero h1 {
+        font-size: clamp(2.65rem, 12vw, 4.2rem);
+        line-height: 1;
+    }
 
-  .quadrant-map::before,
-  .quadrant-map::after {
-    display: none;
-  }
+    .menu-page-hero p:last-child,
+    .menu-card li {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
-  .axis-label {
-    position: static;
-    transform: none;
-    text-align: center;
-    margin: 0.25rem 0;
-  }
+    .menu-card h3 {
+        font-size: clamp(1.55rem, 8vw, 2.2rem);
+        line-height: 1.05;
+    }
 
-  .quadrant-drink {
-    position: static;
-    transform: none;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
+    .menu-card li {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
 
-  .quadrant-drink img {
-    width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: cover;
-  }
+    .menu-card li span {
+        font-size: 0.88rem;
+    }
+
+    .quadrant-menu-section {
+        padding: 52px 0 72px;
+        overflow: visible;
+    }
+
+    .quadrant-menu-section .section-heading h2 {
+        font-size: clamp(2.25rem, 10vw, 3.7rem);
+        line-height: 1;
+    }
+
+    .quadrant-map {
+        width: 100%;
+        max-width: 100%;
+        min-height: clamp(500px, 132vw, 650px);
+        display: block;
+        padding: 34px 14px;
+        overflow: hidden;
+        background:
+            linear-gradient(rgba(46, 100, 23, 0.14) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(46, 100, 23, 0.14) 1px, transparent 1px),
+            rgba(255, 255, 255, 0.74);
+        background-size: 24px 24px;
+    }
+
+    .quadrant-map::before,
+    .quadrant-map::after {
+        display: block;
+    }
+
+    .quadrant-map::before {
+        top: 14%;
+        bottom: 14%;
+        width: 3px;
+    }
+
+    .quadrant-map::after {
+        top: 54%;
+        left: 9%;
+        right: 9%;
+        height: 3px;
+    }
+
+    .axis-label {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        padding: 5px 7px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: clamp(0.72rem, 3.4vw, 1rem);
+        line-height: 1.05;
+        transform: none;
+        writing-mode: horizontal-tb;
+    }
+
+    .axis-top,
+    .axis-bottom {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .axis-top {
+        top: 14px;
+    }
+
+    .axis-bottom {
+        bottom: 14px;
+    }
+
+    .axis-left {
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .axis-right {
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .quadrant-drink {
+        position: absolute;
+        z-index: 1;
+        width: auto;
+        max-width: clamp(88px, 26vw, 122px);
+        margin: 0;
+        padding: 9px;
+        gap: 5px;
+        border-radius: 16px;
+    }
+
+    .quadrant-drink img {
+        width: clamp(42px, 13vw, 58px);
+        height: clamp(42px, 13vw, 58px);
+        max-height: none;
+        object-fit: cover;
+    }
+
+    .quadrant-drink span {
+        font-size: 0.68rem;
+    }
+
+    .quadrant-drink h3 {
+        font-size: clamp(0.72rem, 2.9vw, 0.92rem);
+        line-height: 1.08;
+    }
+
+    .quadrant-drink-heidi {
+        top: 15%;
+        left: 8%;
+    }
+
+    .quadrant-drink-nina {
+        top: 27%;
+        left: 36%;
+    }
+
+    .quadrant-drink-ginger {
+        top: 17%;
+        right: 8%;
+    }
+
+    .quadrant-drink-vivian {
+        left: 36%;
+        bottom: 17%;
+    }
+
+    .quadrant-drink-orange-tonic {
+        left: 9%;
+        bottom: 29%;
+    }
+
+    .quadrant-drink-felix {
+        right: 8%;
+        bottom: 18%;
+    }
 }
