@@ -47,6 +47,24 @@ svg {
     max-width: 100%;
 }
 
+picture {
+    display: block;
+}
+
+.service-card picture,
+.gallery-image-button picture {
+    width: 100%;
+}
+
+.about-left picture {
+    width: 100%;
+    height: 100%;
+}
+
+.about-left-felix picture {
+    height: auto;
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -131,7 +149,14 @@ main {
 }
 
 .left-box {
-    background: url('optimized/cof-cart.jpg') center/cover no-repeat;
+    background-image: url('optimized/cof-cart.jpg');
+    background-image: image-set(
+        url('optimized/cof-cart.webp') type('image/webp'),
+        url('optimized/cof-cart.jpg') type('image/jpeg')
+    );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .right-box,
@@ -159,7 +184,9 @@ main {
 .right-box h1,
 .left-box_2 h2,
 .testimonials h2,
+.about-right h1,
 .about-right h2,
+.faq-section h1,
 .faq-section h2 {
     margin: 0;
     color: var(--text);
@@ -256,9 +283,18 @@ main {
 }
 
 .right-box_2 {
-    background:
+    background-image:
         linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.05)),
-        url('optimized/quad-team.jpg') center/cover no-repeat;
+        url('optimized/quad-team.jpg');
+    background-image:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.05)),
+        image-set(
+            url('optimized/quad-team.webp') type('image/webp'),
+            url('optimized/quad-team.jpg') type('image/jpeg')
+        );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .home-services {
@@ -1050,6 +1086,7 @@ main {
     object-position: center 28%;
 }
 
+.about-right h1,
 .about-right h2 {
     font-size: clamp(2.4rem, 4vw, 4.4rem);
     margin-bottom: 20px;
@@ -1075,6 +1112,7 @@ main {
     text-align: center;
 }
 
+.faq-section h1,
 .faq-section h2 {
     text-align: center;
     font-size: clamp(2.4rem, 5vw, 5rem);
