@@ -1,0 +1,38 @@
+[
+    {
+    "title": "Private Wedding",
+    "date": "2026-05-29",
+    "time": "12:00 PM",
+    "location": "Wedding - Private Venue",
+    "public": true
+  },
+  {
+    "title": "Pop Up at Modist Brewing Co.",
+    "date": "2026-08-01",
+    "time": "11:00 AM - 3:00 PM",
+    "location": "Minneapolis, MN",
+    "public": true
+  },
+  {
+    "title": "Pop Up at Modist Brewing Co.",
+    "date": "2026-08-02",
+    "time": "11:00 AM - 3:00 PM",
+    "location": "Minneapolis, MN",
+    "public": true
+  },
+  {
+    "title": "Pop Up at SRH Summer Market - St. Paul",
+    "date": "2026-08-08",
+    "time": "1:00 PM - 4:00 PM",
+    "location": "St. Paul, MN",
+    "public": true
+  },
+    {
+    "title": "Private Wedding",
+    "date": "2026-09-26",
+    "time": "8:00 AM - 6:00 PM",
+    "location": "Wedding - Private Venue",
+    "public": true
+  }
+
+]

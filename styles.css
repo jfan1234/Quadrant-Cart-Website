@@ -499,11 +499,21 @@ main {
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.64);
     color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
     font-weight: 700;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .calendar-day.is-muted {
     color: rgba(110, 110, 115, 0.38);
+}
+
+.calendar-day:hover,
+.calendar-day:focus-visible {
+    border-color: rgba(46, 100, 23, 0.38);
+    box-shadow: 0 0 0 3px rgba(46, 100, 23, 0.12);
+    outline: none;
 }
 
 .calendar-day.has-event {
@@ -511,6 +521,11 @@ main {
     background: var(--text);
     color: white;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.calendar-day.is-selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(46, 100, 23, 0.18), 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 
 .calendar-day.has-event::after {
@@ -523,11 +538,50 @@ main {
     background: var(--accent);
 }
 
+.selected-events {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.selected-events h3 {
+    margin: 0 0 14px;
+    color: var(--text);
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.selected-events .event-card {
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+    padding: 16px;
+}
+
+.selected-events .event-card time {
+    width: fit-content;
+    min-height: 0;
+    padding: 8px 12px;
+}
+
+.event-card-private {
+    display: block;
+}
+
+.event-card-private h3 {
+    margin-bottom: 0;
+}
+
 .event-list {
     display: flex;
     flex-direction: column;
     gap: 14px;
     padding: clamp(22px, 3vw, 34px);
+}
+
+.event-list > div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .event-card {
@@ -562,6 +616,12 @@ main {
     margin: 0;
     color: var(--muted);
     line-height: 1.45;
+}
+
+.event-empty {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
 }
 
 .event-button {
@@ -928,14 +988,18 @@ main {
 }
 
 .gallery-container {
-    columns: 3 280px;
-    column-gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    grid-auto-rows: 8px;
+    gap: 18px;
+    align-items: start;
 }
 
 .gallery-item {
-    display: inline-block;
+    display: block;
     width: 100%;
-    margin: 0 0 18px;
+    margin: 0;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.82);
     border-radius: 26px;
@@ -963,6 +1027,10 @@ main {
 .gallery-image-button:focus-visible {
     outline: 4px solid rgba(46, 100, 23, 0.28);
     outline-offset: -4px;
+}
+
+.gallery-image-button picture {
+    display: block;
 }
 
 .gallery-item img {
@@ -1071,6 +1139,21 @@ main {
     display: block;
     aspect-ratio: auto;
     background: transparent;
+}
+
+.about-left-marina {
+    aspect-ratio: 4 / 5;
+    max-width: 520px;
+}
+
+.about-left-vivian {
+    aspect-ratio: 3 / 4;
+    max-width: 520px;
+}
+
+.about-left-jesse {
+    aspect-ratio: 3 / 4;
+    max-width: 520px;
 }
 
 .about-left img[src="optimized/felix.jpg"] {
@@ -1465,7 +1548,7 @@ details[open] p {
     }
 
     .gallery-container {
-        columns: 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .service-card-content {
@@ -1622,7 +1705,7 @@ details[open] p {
     }
 
     .gallery-container {
-        columns: 1;
+        grid-template-columns: 1fr;
     }
 }
 .contact-page {

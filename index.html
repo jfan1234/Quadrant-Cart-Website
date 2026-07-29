@@ -9,6 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Quadrant Cart">
     <meta name="theme-color" content="#f5f5f7">
+    <link rel="icon" href="optimized/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="canonical" href="https://quadrantcart.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Quadrant Cart">
@@ -19,7 +20,7 @@
     <meta property="og:image:alt" content="Quadrant Cart mobile coffee and matcha setup">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Quadrant Cart | Minneapolis & St. Paul Coffee Cart">
-    <meta name="twitter:description" content="Coffee, matcha, and event cart service for Minneapolis, St. Paul, the Twin Cities, and Minnesota gatherings.">
+    <meta name="twitter:description" content="Coffee, matcha, and event cart service for gatherings in Minneapolis, St. Paul, and surrounding suburbs.">
     <meta name="twitter:image" content="https://quadrantcart.com/optimized/cof-cart.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +77,7 @@
             <div class="box right-box">
                 <p class="eyebrow">Coffee • Matcha • Events</p>
                 <h1>Matcha and coffee as an art form, now on wheels.</h1>
-                <p class="hero-copy">A polished mobile cafe experience for weddings, private events, pop-ups, and brand moments across Minneapolis, St. Paul, and the Twin Cities.</p>
+                <p class="hero-copy">A polished mobile cafe experience for weddings, private events, pop-ups, and brand moments across Minneapolis, St. Paul, and surrounding suburbs.</p>
                 <div class="button-group">
                     <a href="about.html" class="button button-dark">Discover More</a>
                     <a href="contact-us.html" class="button button-light">Book for Event</a>
@@ -112,7 +113,7 @@
                     </picture>
                     <div class="service-card-content">
                         <h3>Weddings & Private Events</h3>
-                        <p>Bring a polished matcha and coffee bar to Twin Cities receptions, showers, birthdays, and intimate celebrations.</p>
+                        <p>Bring a polished matcha and coffee bar to Twin Cities receptions, baby showers, birthdays, and graduation parties.</p>
                         <a href="contact-us.html#booking" class="service-link">Request your quote</a>
                     </div>
                 </article>
@@ -166,8 +167,8 @@
                     <div class="calendar-header">
                         <button type="button" class="calendar-nav-button" data-calendar-prev aria-label="View previous month">‹</button>
                         <div>
-                            <p data-calendar-month>May</p>
-                            <span data-calendar-year>2026</span>
+                            <p data-calendar-month></p>
+                            <span data-calendar-year></span>
                         </div>
                         <button type="button" class="calendar-nav-button" data-calendar-next aria-label="View next month">›</button>
                     </div>
@@ -181,16 +182,16 @@
                         <span>Fri</span>
                         <span>Sat</span>
                     </div>
+
+                    <div class="selected-events" data-selected-events aria-live="polite">
+                        <p>Select a highlighted date to view event details.</p>
+                    </div>
                 </div>
 
-                <div class="event-list" aria-label="Upcoming cart appearances">
-                    <article class="event-card">
-                        <time datetime="2026-05-29T13:00">May 29</time>
-                        <div>
-                            <h3>Private Event - Wedding</h3>
-                            <p>1:00 PM · Apple Valley, MN</p>
-                        </div>
-                    </article>
+                <div class="event-list" aria-label="Upcoming public cart appearances">
+                    <div data-public-events aria-live="polite">
+                        <p class="event-empty">Loading upcoming events...</p>
+                    </div>
 
                     <a href="contact-us.html#booking" class="button button-dark event-button">Book Quadrant Cart</a>
                 </div>
@@ -224,12 +225,12 @@
 
                 <article class="testimonial-card">
                     <p>“Loved the matcha cart! Super fresh drinks and great vibe. Can't wait for the next event!”</p>
-                    <h4>Justin B</h4>
+                    <h4>Janet P</h4>
                 </article>
 
                 <article class="testimonial-card">
                     <p>“Such a great experience! Delicious coffee and a beautiful setup. Looking forward to seeing you again soon!”</p>
-                    <h4>Mickey M</h4>
+                    <h4>Steven E</h4>
                 </article>
             </div>
         </section>
@@ -243,7 +244,6 @@
             </div>
 
             <div class="footer-links">
-                <a href="mailto:quadrant.cart@gmail.com">quadrant.cart@gmail.com</a>
                 <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener">Instagram @quadrant.cart</a>
                 <a href="contact-us.html">Contact Us</a>
             </div>
@@ -259,88 +259,7 @@
             <p>© 2026 Quadrant Cart. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        const eventDates = {
-            "2026-05-29": "Private Event - Wedding"
-        };
-
-        const calendarMonths = [
-            new Date(2026, 4, 1),
-            new Date(2026, 5, 1),
-            new Date(2026, 6, 1),
-            new Date(2026, 7, 1)
-        ];
-
-        const calendarGrid = document.querySelector("[data-calendar-grid]");
-        const calendarMonth = document.querySelector("[data-calendar-month]");
-        const calendarYear = document.querySelector("[data-calendar-year]");
-        const calendarPrevious = document.querySelector("[data-calendar-prev]");
-        const calendarNext = document.querySelector("[data-calendar-next]");
-        const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "long" });
-        let activeCalendarIndex = 0;
-
-        const getDateKey = (year, month, day) => {
-            const monthNumber = String(month + 1).padStart(2, "0");
-            const dayNumber = String(day).padStart(2, "0");
-            return `${year}-${monthNumber}-${dayNumber}`;
-        };
-
-        const renderCalendar = () => {
-            const activeMonth = calendarMonths[activeCalendarIndex];
-            const year = activeMonth.getFullYear();
-            const month = activeMonth.getMonth();
-            const firstDay = new Date(year, month, 1).getDay();
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-            const previousMonthDays = new Date(year, month, 0).getDate();
-
-            calendarMonth.textContent = monthFormatter.format(activeMonth);
-            calendarYear.textContent = year;
-            calendarGrid.querySelectorAll(".calendar-day").forEach((day) => day.remove());
-
-            for (let index = 0; index < 42; index += 1) {
-                const day = document.createElement("span");
-                day.className = "calendar-day";
-
-                if (index < firstDay) {
-                    day.textContent = previousMonthDays - firstDay + index + 1;
-                    day.classList.add("is-muted");
-                } else if (index >= firstDay + daysInMonth) {
-                    day.textContent = index - firstDay - daysInMonth + 1;
-                    day.classList.add("is-muted");
-                } else {
-                    const dateNumber = index - firstDay + 1;
-                    const dateKey = getDateKey(year, month, dateNumber);
-                    day.textContent = dateNumber;
-
-                    if (eventDates[dateKey]) {
-                        day.classList.add("has-event");
-                        day.setAttribute("aria-label", `${eventDates[dateKey]} on ${monthFormatter.format(activeMonth)} ${dateNumber}, ${year}`);
-                    }
-                }
-
-                calendarGrid.append(day);
-            }
-
-            calendarPrevious.disabled = activeCalendarIndex === 0;
-            calendarNext.disabled = activeCalendarIndex === calendarMonths.length - 1;
-        };
-
-        calendarPrevious.addEventListener("click", () => {
-            if (activeCalendarIndex > 0) {
-                activeCalendarIndex -= 1;
-                renderCalendar();
-            }
-        });
-
-        calendarNext.addEventListener("click", () => {
-            if (activeCalendarIndex < calendarMonths.length - 1) {
-                activeCalendarIndex += 1;
-                renderCalendar();
-            }
-        });
-
-        renderCalendar();
-    </script>
+    <script src="js/calendar.js" defer></script>
 </body>
 
 </html>

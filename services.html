@@ -9,6 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Quadrant Cart">
     <meta name="theme-color" content="#f5f5f7">
+    <link rel="icon" href="optimized/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="canonical" href="https://quadrantcart.com/services.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Quadrant Cart">
@@ -56,7 +57,7 @@
         <p class="eyebrow">Services</p>
         <h1>Choose the cart experience that fits your event.</h1>
         <p>
-            Every booking includes a polished mobile cart setup, thoughtful service, and a focused coffee and matcha menu built for Minneapolis, St. Paul, and Twin Cities gatherings.
+            Every booking includes a polished mobile cart setup, thoughtful service, and a focused coffee and matcha menu built for gatherings throughout Minneapolis, St. Paul, and surrounding suburbs.
         </p>
     </section>
 
@@ -70,10 +71,10 @@
             <article class="package-card">
                 <p class="package-number">Package #1</p>
                 <ul>
-                    <li>100 drinks</li>
+                    <li>&lt;50 drinks</li>
                     <li>1 hour of service</li>
                     <li>2 hour set-up/breakdown</li>
-                    <li>Standard menu</li>
+                    <li>Two custom drinks</li>
                 </ul>
             </article>
 
@@ -84,58 +85,30 @@
                     <li>1 hour of service</li>
                     <li>2 hour set-up/breakdown</li>
                     <li>Standard menu</li>
-                    <li>His/her custom drinks</li>
+                    <li>Two custom drinks</li>
                 </ul>
             </article>
 
             <article class="package-card">
                 <p class="package-number">Package #3</p>
                 <ul>
-                    <li>100 drinks</li>
-                    <li>1 hour of service</li>
-                    <li>2 hour set-up/breakdown</li>
-                    <li>Standard menu</li>
-                    <li>His/her custom drinks</li>
-                    <li>Custom cups and sign on the cart</li>
-                </ul>
-            </article>
-
-            <article class="package-card">
-                <p class="package-number">Package #4</p>
-                <ul>
                     <li>Unlimited drinks</li>
                     <li>1 hour of service</li>
                     <li>2 hour set-up/breakdown</li>
                     <li>Standard menu</li>
-                    <li>His/her custom drinks</li>
-                    <li>Custom cup and sign on the cart</li>
+                    <li>Two custom drinks</li>
+                </ul>
+            </article>
+
+            <article class="package-card">
+                <p class="package-number">Add-Ons</p>
+                <ul>
+                    <li>Custom phrase on A-frame sign</li>
+                    <li>Hand-whisked matcha</li>
+                    <li>Additional hours of service</li>
                 </ul>
             </article>
         </div>
-    </section>
-
-    <section class="service-details-section" aria-label="Menu and add-ons">
-        <article class="service-detail-card">
-            <h2>Standard Menu</h2>
-            <p>Available hot or iced.</p>
-            <ul>
-                <li>Americano</li>
-                <li>Latte</li>
-                <li>Matcha</li>
-                <li>Matcha latte</li>
-                <li>Syrups: vanilla, simple syrup, mocha</li>
-                <li>Milk: whole, oat</li>
-            </ul>
-        </article>
-
-        <article class="service-detail-card">
-            <h2>Add-ons</h2>
-            <p>Make the cart feel more tailored to your Minnesota event.</p>
-            <ul>
-                <li>Hand-whisked matcha</li>
-                <li>Additional hour of service</li>
-            </ul>
-        </article>
     </section>
 
     <section class="quote-section" aria-labelledby="quote-heading">
@@ -143,7 +116,7 @@
             <p class="eyebrow">Custom quote</p>
             <h2 id="quote-heading">Answer a few questions and we’ll help build the right package.</h2>
             <p>
-                Tell us about your Minneapolis, St. Paul, or Minnesota event size, timing, drink preferences, and any custom touches you have in mind.
+                Tell us about your event size, timing, drink preferences, and any custom touches you have in mind.
             </p>
         </div>
 
@@ -180,17 +153,17 @@
                     <option>Package #1</option>
                     <option>Package #2</option>
                     <option>Package #3</option>
-                    <option>Package #4</option>
                 </select>
             </label>
 
             <fieldset class="quote-options">
                 <legend>Add-ons you’re interested in</legend>
+                <label><input type="checkbox" name="add_ons" value="Custom phrase on A-frame sign"> Custom phrase on A-frame sign</label>
                 <label><input type="checkbox" name="add_ons" value="Hand-whisked matcha"> Hand-whisked matcha</label>
-                <label><input type="checkbox" name="add_ons" value="Additional hour of service"> Additional hour of service</label>
-                <label><input type="checkbox" name="add_ons" value="Custom cups and sign"> Custom cups and sign</label>
-                <label><input type="checkbox" name="add_ons" value="Custom drinks"> Custom drinks</label>
+                <label><input type="checkbox" name="add_ons" value="Additional hours of service"> Additional hours of service</label>
             </fieldset>
+
+            <input type="text" name="estimated_budget" placeholder="Estimated budget">
 
             <textarea
                 name="message"
@@ -211,7 +184,6 @@
         </div>
 
         <div class="footer-links">
-            <a href="mailto:quadrant.cart@gmail.com">Email: quadrant.cart@gmail.com</a>
             <a href="https://www.instagram.com/quadrant.cart" target="_blank" rel="noopener noreferrer">Instagram @quadrant.cart</a>
             <a href="contact-us.html">Contact Us</a>
         </div>
